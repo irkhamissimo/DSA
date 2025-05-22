@@ -1,0 +1,9 @@
+graph TD
+    A[Start: Build Frequency Counters] --> B{For each key in obj1}
+    B -->|Key in obj2?| C[Yes]
+    B -->|No| D[Return false]
+    C --> E{Values equal?}
+    E -->|Yes| F[Next key]
+    E -->|No| D
+    F --> B
+    B -->|All keys checked| G[Return true] 
